@@ -30,7 +30,8 @@ module Hydra::Derivatives::Processors
     end
 
     def execute_without_timeout(opts, context)
-      encode_job = ActiveEncode::Base.create(source_path, opts)
+byebug
+      encode_job = ActiveEncode::Base.create(URI.join("file://", source_path).to_s, opts)
       context[:encode_id] = encode_job.id
       sleep(0.1) until encode_job.reload.completed?
     end

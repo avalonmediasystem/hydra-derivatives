@@ -8,3 +8,7 @@ group :development, :test do
   gem 'rubocop', '~> 0.37.2', require: false
   gem 'rubocop-rspec', require: false
 end
+
+gem 'active_encode', path: '../active_encode'
+gem 'shingoncoder', path: '../shingoncoder'
+gem 'sqlite3'
