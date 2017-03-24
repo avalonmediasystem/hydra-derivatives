@@ -19,6 +19,9 @@ dng_format = MIME::Type.new('image/x-adobe-dng')
 dng_format.extensions = 'dng'
 MIME::Types.add(dng_format)
 
+require 'active_encode'
+ActiveEncode::Base.engine_adapter = :test
+
 def fixture_path
   File.expand_path("../fixtures", __FILE__)
 end

@@ -189,10 +189,12 @@ describe "Transcoding" do
 
     context "and the timeout is set" do
       before do
-        Hydra::Derivatives::Processors::Video::Processor.timeout = 0.2 # 200ms
+        # Hydra::Derivatives::Processors::Video::Processor.timeout = 0.2 # 200ms
+        Hydra::Derivatives::Processors::ActiveEncodeProcessor.timeout = 0.2 # 200ms
       end
       after do
-        Hydra::Derivatives::Processors::Video::Processor.timeout = nil # clear timeout
+        # Hydra::Derivatives::Processors::Video::Processor.timeout = nil # clear timeout
+        Hydra::Derivatives::Processors::ActiveEncodeProcessor.timeout = nil # clear timeout
       end
 
       it "raises a timeout" do

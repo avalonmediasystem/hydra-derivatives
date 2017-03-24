@@ -15,5 +15,6 @@ module Hydra::Derivatives
     autoload :RawImage
     autoload :ShellBasedProcessor
     autoload :Video
+    autoload :ActiveEncodeProcessor
   end
 end

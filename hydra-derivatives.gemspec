@@ -28,5 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'activesupport', '>= 4.0', '< 6'
   spec.add_dependency 'mime-types', '> 2.0', '< 4.0'
   spec.add_dependency 'deprecation'
+  spec.add_dependency 'active_encode'
 end
 
