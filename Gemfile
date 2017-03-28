@@ -11,4 +11,5 @@ end
 
 gem 'active_encode', path: '../active_encode'
 gem 'shingoncoder', path: '../shingoncoder'
+gem 'rubyhorn', path: '../../avalon/rubyhorn'
 gem 'sqlite3'
